@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mi Tienda — Contacto y Mensajes</title>
+
+        <!-- Fuente moderna -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <!-- ===== BARRA DE NAVEGACIÓN (NAVBAR) ===== -->
+        <header class="navbar">
+            <div class="contenedor nav-contenido">
+                <a href="index.html" class="logo"> Mi<strong>Tienda</strong></a>
+                <nav class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="contenedor" id="inicio">
+            <div class="encabezado-principal">
+                <h1>Sección de Contacto y Mensajes</h1>
+                <p>Envía tus comentarios o consulta los mensajes recibidos</p>
+            </div>
+
+            <div class="panel-tienda">
+                <!-- SECCIÓN 1: Formulario de Contacto -->
+                <section class="tarjeta" id="registro">
+                    <h2 id="tituloFormulario">Enviar Comentario</h2>
+
+                    <form id="formularioContacto">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                placeholder="Ej: Pepito Perez"
+                                required
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input
+                                type="email"
+                                id="correo"
+                                placeholder="Ej: ejemplo@gmail.com"
+                                required
+                            />
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea
+                                id="mensaje"
+                                placeholder="Ingresa tu comentario aquí..."
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="acciones-form">
+                            <button
+                                type="submit"
+                                id="btnGuardarContacto"
+                                class="btn btn-guardar"
+                            >
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- SECCIÓN 2: Lista y Consulta de Mensajes -->
+                <section class="tarjeta" id="mensajes">
+                    <h2>Bandeja de Mensajes</h2>
+                    <button
+                        id="btnConsultarMensajes"
+                        class="btn"
+                        style="margin-bottom: 15px"
+                    >
+                        Consultar Todos los Mensajes
+                    </button>
+                    <div id="listaMensajes" class="lista-productos">
+                        <!-- Los mensajes se cargarán aquí dinámicamente -->
+                        <p style="color: #64748b">
+                            Haz clic en el botón para consultar los mensajes.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- ===== PIE DE PÁGINA (FOOTER) ===== -->
+        <footer class="footer">
+            <div class="contenedor footer-contenido">
+                <p>
+                    &copy; 2026 Mi Tienda — Proyecto Formativo con Node.js,
+                    Express y MySQL.
+                </p>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
